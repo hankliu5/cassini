@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		938A9C951D504BAA002FFE7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A9C941D504BAA002FFE7F /* AppDelegate.swift */; };
-		938A9C971D504BAA002FFE7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A9C961D504BAA002FFE7F /* ViewController.swift */; };
 		938A9C9A1D504BAA002FFE7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A9C981D504BAA002FFE7F /* Main.storyboard */; };
 		938A9C9C1D504BAA002FFE7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938A9C9B1D504BAA002FFE7F /* Assets.xcassets */; };
 		938A9C9F1D504BAA002FFE7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A9C9D1D504BAA002FFE7F /* LaunchScreen.storyboard */; };
+		938A9CA81D504C1D002FFE7F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A9CA71D504C1D002FFE7F /* ImageViewController.swift */; };
+		938A9CAA1D504E76002FFE7F /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A9CA91D504E76002FFE7F /* DemoURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		938A9C911D504BAA002FFE7F /* Cassini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cassini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A9C941D504BAA002FFE7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		938A9C961D504BAA002FFE7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		938A9C991D504BAA002FFE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		938A9C9B1D504BAA002FFE7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		938A9C9E1D504BAA002FFE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938A9CA01D504BAA002FFE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		938A9CA71D504C1D002FFE7F /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		938A9CA91D504E76002FFE7F /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		938A9C931D504BAA002FFE7F /* Cassini */ = {
 			isa = PBXGroup;
 			children = (
-				938A9C941D504BAA002FFE7F /* AppDelegate.swift */,
-				938A9C961D504BAA002FFE7F /* ViewController.swift */,
+				938A9CA61D504BC1002FFE7F /* Supporting Files */,
 				938A9C981D504BAA002FFE7F /* Main.storyboard */,
-				938A9C9B1D504BAA002FFE7F /* Assets.xcassets */,
-				938A9C9D1D504BAA002FFE7F /* LaunchScreen.storyboard */,
 				938A9CA01D504BAA002FFE7F /* Info.plist */,
+				938A9CA71D504C1D002FFE7F /* ImageViewController.swift */,
+				938A9CA91D504E76002FFE7F /* DemoURL.swift */,
 			);
 			path = Cassini;
+			sourceTree = "<group>";
+		};
+		938A9CA61D504BC1002FFE7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				938A9C941D504BAA002FFE7F /* AppDelegate.swift */,
+				938A9C9B1D504BAA002FFE7F /* Assets.xcassets */,
+				938A9C9D1D504BAA002FFE7F /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938A9C971D504BAA002FFE7F /* ViewController.swift in Sources */,
+				938A9CA81D504C1D002FFE7F /* ImageViewController.swift in Sources */,
 				938A9C951D504BAA002FFE7F /* AppDelegate.swift in Sources */,
+				938A9CAA1D504E76002FFE7F /* DemoURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
