@@ -21,7 +21,7 @@
         <!--Cassini-->
         <scene sceneID="8kf-dx-7eC">
             <objects>
-                <viewController id="ssS-gV-OeK" customClass="CassiniViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ssS-gV-OeK" customClass="CassiniViewController" customModule="Cassini" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9xN-p3-Skn"/>
                         <viewControllerLayoutGuide type="bottom" id="DQZ-6G-KiA"/>
@@ -38,7 +38,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Earth"/>
                                         <connections>
-                                            <segue destination="dDb-Pp-QPy" kind="showDetail" identifier="Show Image" id="aC8-Ee-8Wg"/>
+                                            <action selector="showImage:" destination="ssS-gV-OeK" eventType="touchUpInside" id="ggf-8k-mFO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc8-nR-hqx">
@@ -46,7 +46,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Cassini"/>
                                         <connections>
-                                            <segue destination="dDb-Pp-QPy" kind="showDetail" identifier="Show Image" id="PYc-ut-tDq"/>
+                                            <action selector="showImage:" destination="ssS-gV-OeK" eventType="touchUpInside" id="7co-XE-lbC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-As-Sqv">
@@ -54,7 +54,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Saturn"/>
                                         <connections>
-                                            <segue destination="dDb-Pp-QPy" kind="showDetail" identifier="Show Image" id="uWI-cZ-d90"/>
+                                            <action selector="showImage:" destination="ssS-gV-OeK" eventType="touchUpInside" id="z81-bw-UaM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -67,6 +67,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cassini" id="RrP-SU-hCF"/>
+                    <connections>
+                        <segue destination="dDb-Pp-QPy" kind="show" identifier="Show Image" id="iM2-ug-Ese"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXm-2B-3dz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,9 +90,15 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvy-hJ-UeX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aBe-uG-RKl">
+                                <rect key="frame" x="281" y="282" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aBe-uG-RKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1pz-s7-E3Q"/>
+                            <constraint firstItem="aBe-uG-RKl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7pY-Oh-gZd"/>
                             <constraint firstItem="Kvy-hJ-UeX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HrY-JP-DmG"/>
                             <constraint firstItem="Kvy-hJ-UeX" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Xrm-5i-NAn"/>
                             <constraint firstItem="Kvy-hJ-UeX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j3Q-Lt-r8r"/>
@@ -99,6 +108,7 @@
                     <navigationItem key="navigationItem" id="7Vm-yt-otU"/>
                     <connections>
                         <outlet property="scrollView" destination="Kvy-hJ-UeX" id="W8s-UY-S34"/>
+                        <outlet property="spinner" destination="aBe-uG-RKl" id="ehh-L2-WQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,10 +149,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bme-dU-Eb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-541" y="319"/>
+            <point key="canvasLocation" x="-541" y="292"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uWI-cZ-d90"/>
+        <segue reference="iM2-ug-Ese"/>
     </inferredMetricsTieBreakers>
 </document>
